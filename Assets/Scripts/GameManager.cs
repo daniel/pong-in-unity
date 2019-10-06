@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     int leftScore = 0;
     int rightScore = 0;
 
-    int maxScore = 2; // 10
+    int maxScore = 10;
 
     Paddle paddle1;
     Paddle paddle2;
@@ -36,8 +36,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void InitNewGame() {
-        leftScoreText.text = "00";
-        rightScoreText.text = "00";
+        leftScore = 0;
+        rightScore = 0;
+        UpdateScore();
         gameMessage.text = "";
         restartMessage.text = "";
         ContinueGame();
